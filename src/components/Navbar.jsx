@@ -10,7 +10,7 @@ const Navbar = () => {
 
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
 
-        {/* Logo */}
+        
         <Link
           to="/"
           className="flex items-center gap-3"
@@ -31,7 +31,7 @@ const Navbar = () => {
         </Link>
 
 
-        {/* Desktop Menu */}
+        
         <nav className="hidden items-center gap-8 md:flex">
 
           <Link
@@ -65,7 +65,6 @@ const Navbar = () => {
         </nav>
 
 
-        {/* Right */}
         <div className="hidden items-center gap-4 md:flex">
 
           <div className="flex items-center gap-2 text-sm text-slate-600">
@@ -90,7 +89,7 @@ const Navbar = () => {
         </div>
 
 
-        {/* Mobile */}
+    
         <button className="rounded-lg p-2 text-2xl text-slate-700 md:hidden">
           <FiMenu />
         </button>
