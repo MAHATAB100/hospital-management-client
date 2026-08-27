@@ -1,13 +1,21 @@
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    console.log("Email:", email);
+    console.log("Password:", password);
+  };
+
   return (
     <section className="flex min-h-screen items-center justify-center bg-slate-50 px-4 py-12">
-
       <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-100">
 
         <div className="text-center">
-
           <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-blue-600 text-2xl font-bold text-white">
             +
           </div>
@@ -19,12 +27,12 @@ const Login = () => {
           <p className="mt-2 text-sm text-slate-500">
             Login to access your healthcare portal.
           </p>
-
         </div>
 
-
-        <form className="mt-8 space-y-5">
-
+        <form
+          onSubmit={handleLogin}
+          className="mt-8 space-y-5"
+        >
           <div>
             <label className="mb-2 block text-sm font-semibold">
               Email
@@ -32,11 +40,11 @@ const Login = () => {
 
             <input
               type="email"
+              name="email"
               placeholder="Enter Your Email"
               className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-50"
             />
           </div>
-
 
           <div>
             <label className="mb-2 block text-sm font-semibold">
@@ -45,11 +53,11 @@ const Login = () => {
 
             <input
               type="password"
+              name="password"
               placeholder="••••••••"
               className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-50"
             />
           </div>
-
 
           <button
             type="submit"
@@ -57,12 +65,9 @@ const Login = () => {
           >
             Login
           </button>
-
         </form>
 
-
         <p className="mt-6 text-center text-sm text-slate-500">
-
           Don't have an account?{" "}
 
           <Link
@@ -71,11 +76,9 @@ const Login = () => {
           >
             Register
           </Link>
-
         </p>
 
       </div>
-
     </section>
   );
 };
