@@ -5,9 +5,10 @@ import DashboardLayout from "../layouts/DashboardLayout";
 
 import Home from "../pages/Home/Home";
 import BookAppointment from "../pages/Appointment/BookAppointment";
+import PatientDashboard from "../pages/patient/PatientDashboard";
+import MyAppointments from "../pages/patient/MyAppointments";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-import Sidebar from "../components/Sidebar";
 
 const router = createBrowserRouter([
   {
@@ -30,14 +31,9 @@ const router = createBrowserRouter([
         path: "register",
         element: <Register />,
       },
-      {
-        path:"sidebar",
-        element:<Sidebar></Sidebar>
-      }
     ],
   },
 
-  
   {
     path: "/dashboard",
     element: <DashboardLayout />,
@@ -45,6 +41,14 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <h1>Dashboard Home</h1>,
+      },
+      {
+        path: "patientDashboard",
+        element: <PatientDashboard />,
+      },
+      {
+        path: "appointments",
+        element: <MyAppointments />,
       },
     ],
   },

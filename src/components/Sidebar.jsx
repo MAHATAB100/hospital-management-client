@@ -14,12 +14,12 @@ const Sidebar = () => {
   const menu = [
     {
       name: "Dashboard",
-      path: "/patient/dashboard",
+      path: "/dashboard/patientDashboard",
       icon: <FiHome />,
     },
     {
       name: "My Appointments",
-      path: "/patient/appointments",
+      path: "/dashboard/appointments",
       icon: <FiCalendar />,
     },
     {
@@ -29,17 +29,17 @@ const Sidebar = () => {
     },
     {
       name: "Prescriptions",
-      path: "/patient/prescriptions",
+      path: "/dashboard/prescriptions",
       icon: <FiFileText />,
     },
     {
       name: "Billing",
-      path: "/patient/billing",
+      path: "/dashboard/billing",
       icon: <FiCreditCard />,
     },
     {
       name: "Profile",
-      path: "/patient/profile",
+      path: "/dashboard/profile",
       icon: <FiUser />,
     },
   ];
@@ -47,9 +47,8 @@ const Sidebar = () => {
   return (
     <aside className="sticky top-0 hidden h-screen w-72 flex-col border-r border-slate-200 bg-white p-5 lg:flex">
 
-      
+     
       <div className="flex items-center gap-3 px-3 py-4">
-
         <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-xl font-bold text-white">
           +
         </div>
@@ -63,10 +62,9 @@ const Sidebar = () => {
             Patient Portal
           </p>
         </div>
-
       </div>
 
-    
+  
       <nav className="mt-8 flex-1 space-y-2">
 
         {menu.map((item) => (
@@ -91,7 +89,7 @@ const Sidebar = () => {
 
       </nav>
 
-      
+    
       <div className="border-t border-slate-100 pt-5">
 
         <div className="flex items-center gap-3 rounded-xl bg-slate-50 p-3">
@@ -114,12 +112,13 @@ const Sidebar = () => {
 
         </div>
 
-        <button className="mt-4 flex w-full items-center gap-3 rounded-xl px-4 py-3 text-slate-500 transition hover:bg-red-50 hover:text-red-600">
-
+        {/* Logout */}
+        <button
+          className="mt-4 flex w-full items-center gap-3 rounded-xl px-4 py-3 text-slate-500 transition hover:bg-red-50 hover:text-red-600"
+        >
           <FiLogOut />
 
           Logout
-
         </button>
 
       </div>
