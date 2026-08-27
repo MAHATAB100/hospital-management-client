@@ -9,6 +9,8 @@ import PatientDashboard from "../pages/patient/PatientDashboard";
 import MyAppointments from "../pages/patient/MyAppointments";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import Prescriptions from "../pages/patient/Prescriptions";
+import Billing from "../pages/patient/Billing";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +52,14 @@ const router = createBrowserRouter([
         path: "appointments",
         element: <MyAppointments />,
       },
+      {
+        path:"prescriptions",
+        element:<Prescriptions></Prescriptions>
+      },
+      {
+        path:"billing",
+        element:<Billing></Billing>
+      }
     ],
   },
 ]);
