@@ -5,6 +5,10 @@ import DashboardLayout from "../layouts/DashboardLayout";
 import DoctorDashboardLayout from "../layouts/DoctorDashboardLayout";
 
 import Home from "../pages/Home/Home";
+import Doctors from "../pages/Doctors/Doctors";
+import Services from "../pages/Services/Services";
+import About from "../pages/About/About";
+
 import BookAppointment from "../pages/Appointment/BookAppointment";
 
 import PatientDashboard from "../pages/patient/PatientDashboard";
@@ -30,14 +34,32 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
+
+      {
+        path: "doctors",
+        element: <Doctors />,
+      },
+
+      {
+        path: "services",
+        element: <Services />,
+      },
+
+      {
+        path: "about",
+        element: <About />,
+      },
+
       {
         path: "book-appointment",
         element: <BookAppointment />,
       },
+
       {
         path: "login",
         element: <Login />,
       },
+
       {
         path: "register",
         element: <Register />,
@@ -91,6 +113,11 @@ const router = createBrowserRouter([
     path: "/doctor",
     element: <DoctorDashboardLayout />,
     children: [
+      {
+        index: true,
+        element: <DoctorDashboard />,
+      },
+
       {
         path: "dashboard",
         element: <DoctorDashboard />,

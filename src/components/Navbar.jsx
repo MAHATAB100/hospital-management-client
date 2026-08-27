@@ -1,16 +1,12 @@
 import { Link } from "react-router-dom";
-import {
-  FiPhone,
-  FiMenu,
-} from "react-icons/fi";
+import { FiPhone, FiMenu } from "react-icons/fi";
 
 const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur">
-
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
 
-        
+        {/* Logo */}
         <Link
           to="/"
           className="flex items-center gap-3"
@@ -30,8 +26,7 @@ const Navbar = () => {
           </div>
         </Link>
 
-
-        
+        {/* Navigation */}
         <nav className="hidden items-center gap-8 md:flex">
 
           <Link
@@ -48,23 +43,23 @@ const Navbar = () => {
             Doctors
           </Link>
 
-          <a
-            href="#services"
+          <Link
+            to="/services"
             className="font-medium text-slate-600 transition hover:text-blue-600"
           >
             Services
-          </a>
+          </Link>
 
-          <a
-            href="#about"
+          <Link
+            to="/about"
             className="font-medium text-slate-600 transition hover:text-blue-600"
           >
             About
-          </a>
+          </Link>
 
         </nav>
 
-
+        {/* Right Side */}
         <div className="hidden items-center gap-4 md:flex">
 
           <div className="flex items-center gap-2 text-sm text-slate-600">
@@ -88,9 +83,11 @@ const Navbar = () => {
 
         </div>
 
-
-    
-        <button className="rounded-lg p-2 text-2xl text-slate-700 md:hidden">
+        {/* Mobile Menu */}
+        <button
+          type="button"
+          className="rounded-lg p-2 text-2xl text-slate-700 md:hidden"
+        >
           <FiMenu />
         </button>
 
