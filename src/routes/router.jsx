@@ -11,6 +11,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Prescriptions from "../pages/patient/Prescriptions";
 import Billing from "../pages/patient/Billing";
+import Profile from "../pages/patient/Profile";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path:"billing",
         element:<Billing></Billing>
+      },
+      {
+        path:"profile",
+        element:<Profile></Profile>
       }
     ],
   },
