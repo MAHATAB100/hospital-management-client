@@ -18,6 +18,8 @@ import Billing from "../pages/patient/Billing";
 import Profile from "../pages/patient/Profile";
 
 import DoctorDashboard from "../pages/doctor/DoctorDashboard";
+import DoctorAppointments from "../pages/doctor/DoctorAppointments";
+import DoctorPatients from "../pages/doctor/DoctorPatients";
 
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
@@ -122,6 +124,14 @@ const router = createBrowserRouter([
         path: "dashboard",
         element: <DoctorDashboard />,
       },
+      {
+          path: "appointments",
+         element: <DoctorAppointments />,
+         },
+         {
+  path: "patients",
+  element: <DoctorPatients />,
+},
     ],
   },
 ]);
